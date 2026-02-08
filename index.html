@@ -26,9 +26,7 @@
         <!-- Menu -->
         <nav class="menu">
             <a href="#" class="active">Comparador de Preços</a>
-            <a href="#">Pesquisa PNCP</a>
-            <a href="#">Gerador de ETP</a>
-            <a href="#">Outras Ferramentas</a>
+            <a href="#" id="btn-config">Configurações</a>
         </nav>
     </header>
 
@@ -118,11 +116,54 @@
                 Calcular Média e Avaliar Preços
             </button>
 
+            <button class="btn-clear" id="btn-limpar">
+                Limpar Campos
+            </button>
+            </div>
+
             <!-- Resultados -->
             <div class="results">
-                <p><strong>Média:</strong> R$ 0,00</p>
-                <p><strong>Variação Percentual:</strong> 0%</p>
+                <p><strong>Média:</strong> <span id="resultado-media">R$ 0,00</span></p>
+                <p><strong>Variação Percentual:</strong> <span id="resultado-variacao">0%</span></p>
             </div>
+
+            <!-- Quadro de Transparência dos Cálculos -->
+            <section class="card info-card">
+
+                <h3>Transparência dos Cálculos Utilizados</h3>
+
+                <p>
+                    Esta ferramenta realiza os cálculos automaticamente com base em fórmulas matemáticas
+                    padronizadas, garantindo clareza e segurança na análise preliminar de preços durante
+                    o planejamento das contratações públicas.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Média aritmética para a média unitária:</strong><br>
+                        (Preço 1 + Preço 2 + Preço 3 + ... + Preço n) / n
+                    </li>
+
+                    <li>
+                        <strong>Variação percentual:</strong><br>
+                        (valor final − valor inicial) / valor inicial × 100
+                    </li>
+
+                    <li>
+                        <strong>Estimação de preço inexequível:</strong><br>
+                        100 − (Preço × 100 / média) &gt; 15%<br>
+                        <em>(porcentagem padrão, podendo ser alterada na opção “Configurações”)</em>
+                    </li>
+
+                    <li>
+                        <strong>Estimação de preço excessivamente elevado:</strong><br>
+                        (Preço × 100 / média) − 100 &gt; 15%<br>
+                        <em>(porcentagem padrão, podendo ser alterada na opção “Configurações”)</em>
+                    </li>
+                </ul>
+
+            </section>
+
 
         </section>
 
@@ -135,6 +176,33 @@
             © 2026 fabioab1
         </p>
     </footer>
+
+    <!-- ✅ Modal Configurações -->
+    <div class="modal-overlay" id="modal-config">
+        <div class="modal-box">
+
+            <h2>Parâmetros de Cálculo</h2>
+            <p>
+                Defina os limites percentuais para identificar preços inexequíveis ou excessivos.
+            </p>
+
+            <div class="modal-form">
+
+                <label for="param-inex">Preço Inexequível (%)</label>
+                <input type="number" id="param-inex" placeholder="Ex: 70">
+
+                <label for="param-exc">Preço Excessivo (%)</label>
+                <input type="number" id="param-exc" placeholder="Ex: 130">
+
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-secondary" id="btn-fechar">Cancelar</button>
+                <button class="btn-primary" id="btn-salvar">Salvar</button>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 
