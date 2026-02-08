@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Ferramentas - Planejamento de Contratações</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script language="javascript" type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Topo / Cabeçalho -->
+    <header class="topbar">
+        <div class="logo-area">
+            <h1>Painel Administrativo</h1>
+            <p>Secretaria Municipal de Saúde • Rancharia/SP</p>
+        </div>
+
+        <!-- Menu -->
+        <nav class="menu">
+            <a href="#" class="active">Comparador de Preços</a>
+            <a href="#">Pesquisa PNCP</a>
+            <a href="#">Gerador de ETP</a>
+            <a href="#">Outras Ferramentas</a>
+        </nav>
+    </header>
+
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+
+        <!-- Card Principal -->
+        <section class="card">
+            <h2>Comparador Automático de Preços</h2>
+            <p>
+                Preencha até <strong>10 preços</strong> para calcular a média, verificar inexequibilidade
+                ou valores excessivos e obter a variação percentual.
+            </p>
+
+            <!-- Inputs -->
+            <div class="price-grid">
+
+                <!-- Campo 1 -->
+                <div class="price-field">
+                    <label>Preço 1</label>
+                    <input id="preco1" type="number" placeholder="Ex: 1250.00">
+                    <span class="status">Status aparecerá aqui</span>
+                </div>
+
+                <!-- Campo 2 -->
+                <div class="price-field">
+                    <label>Preço 2</label>
+                    <input id="preco2" type="number" placeholder="Ex: 1320.00">
+                    <span class="status">Status aparecerá aqui</span>
+                </div>
+
+                <!-- Campo 3 -->
+                <div class="price-field">
+                    <label>Preço 3</label>
+                    <input id="preco3" type="number" placeholder="Ex: 1180.00">
+                    <span class="status">Status aparecerá aqui</span>
+                </div>
+
+                <!-- Repita até 10 -->
+                <div class="price-field">
+                    <label>Preço 4</label>
+                    <input id="preco4" type="number">
+                    <span class="status"></span>
+                </div>
+
+                <div class="price-field">
+                    <label>Preço 5</label>
+                    <input id="preco5" type="number">
+                    <span class="status"></span>
+                </div>
+
+                <div class="price-field">
+                    <label>Preço 6</label>
+                    <input id="preco6" type="number">
+                    <span class="status"></span>
+                </div>
+
+                <div class="price-field">
+                    <label>Preço 7</label>
+                    <input id="preco7" type="number">
+                    <span class="status"></span>
+                </div>
+
+                <div class="price-field">
+                    <label>Preço 8</label>
+                    <input id="preco8" type="number">
+                    <span class="status"></span>
+                </div>
+
+                <div class="price-field">
+                    <label>Preço 9</label>
+                    <input id="preco9" type="number">
+                    <span class="status"></span>
+                </div>
+
+                <div class="price-field">
+                    <label>Preço 10</label>
+                    <input id="preco10" type="number">
+                    <span class="status"></span>
+                </div>
+
+            </div>
+
+            <!-- Botão -->
+            <button class="btn-calc" id="btn-calc-med">
+                Calcular Média e Avaliar Preços
+            </button>
+
+            <!-- Resultados -->
+            <div class="results">
+                <p><strong>Média:</strong> R$ 0,00</p>
+                <p><strong>Variação Percentual:</strong> 0%</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>
+            © 2026 fabioab1
+        </p>
+    </footer>
+
+</body>
+
+</html>
